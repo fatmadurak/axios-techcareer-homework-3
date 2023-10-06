@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Table</title>
+  </head>
+  <body>
+  <div class="table-container">
+    <div class="wrapper">
+        <div class="container">
+          <label>Name:</label>
+          <input type="text" placeholder="Name:" id="name" />
+  
+          <label>UnitPrice:</label>
+          <input type="text" placeholder="Unit Price:" id="unitPrice" />
+  
+          <label>Stock:</label>
+          <input type="text" placeholder="Stock:" id="stock" />
+  
+          <div>
+            <button class="btn" onclick="addNewProduct()">Add</button>
+          </div>
+        </div>
+  
+        <div class="container">
+          <label>Name:</label>
+          <input type="text" placeholder="Name:" id="name" />
+        </div>
+      </div>
+      <table>
+        <thead>
+          <tr>
+            <th>Id</th>
+            <th>Name</th>
+            <th>Price</th>
+            <th>Stock</th>
+          </tr>
+        </thead>
+        <tbody class="tBody"></tbody>
+      </table>
+  </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  </body>
+</html>
