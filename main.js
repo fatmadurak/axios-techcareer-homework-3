@@ -1,5 +1,10 @@
+
+const tBody=document.querySelector(".tBody");
+
+
+
 const url = "https://northwind.vercel.app/api/products";
-let productData = [];
+let productData = []; 
 
 // Ürünleri API'den çekme
 const getProducts = () => {
@@ -8,7 +13,9 @@ const getProducts = () => {
     .then((res) => {
       // Verileri productData dizisine atama
       productData = res.data;
-      console.log(productData); 
+      tableFill(productData)
+
+
     })
     .catch((error) => {
       console.error("Veri çekme sırasında bir hata oluştu: ", error);
@@ -17,3 +24,32 @@ const getProducts = () => {
 
 // getProducts fonksiyonunu çağırarak verileri çekme
 getProducts();
+
+
+
+
+
+
+
+const tableFill=(data)=>{
+   
+data.map((item)=>{
+    
+const tr =document.createElement("tr");
+
+tr.innerHTML=`
+
+      <td>${item.id}</td>
+      <td>${item.name}</td>
+      <td>${item.unitPrice}</td>
+      <td>${item.unitsInStock}</td>
+
+`
+tBody.appendChild(tr);
+
+})
+
+
+
+
+}

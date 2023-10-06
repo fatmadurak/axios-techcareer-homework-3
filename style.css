@@ -10,8 +10,8 @@ align-items: center;
 .wrapper{
     display: flex;
     gap:1rem;
-    width: 50%;
-    background-color: rgb(160, 149, 134);
+    width: 70%;
+    background-color: rgb(218, 213, 208);
     padding: 1rem;
    
 
@@ -56,9 +56,33 @@ margin: .5rem 0;
 table{
 
 border-collapse: collapse;
-width: 100%;
+width: 72%;
 margin-top: 1rem;
 
 
 }
 
+th{
+
+text-align: left;
+background-color: rgb(187, 84, 84);
+
+}
+
+th,td{
+
+    padding: 1rem 5rem;
+    border:1px solid rgb(223, 213, 213);
+}
+
+
+tr:nth-child(odd){
+
+    background-color: rgb(218, 213, 208);
+}
+
+tr:hover{
+
+background-color: green;
+
+}
