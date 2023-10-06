@@ -1,5 +1,11 @@
 
+
 const tBody=document.querySelector(".tBody");
+
+const nameInput=document.querySelector("#name");
+const unitPriceInput=document.querySelector("#unitPrice");
+const stockInput=document.querySelector("#stock");
+
 
 
 
@@ -30,7 +36,7 @@ getProducts();
 
 
 
-
+//fillTable
 const tableFill=(data)=>{
    
 data.map((item)=>{
@@ -43,11 +49,43 @@ tr.innerHTML=`
       <td>${item.name}</td>
       <td>${item.unitPrice}</td>
       <td>${item.unitsInStock}</td>
+      <td>Delete</td>
 
 `
 tBody.appendChild(tr);
 
 })
+
+
+
+
+}
+
+
+
+
+
+const addNewProduct=()=>{
+
+    //Eklenecek ürün objesi
+const newProduct={
+    name: nameInput.value,
+    unitPrice: unitPriceInput.value,
+    stock: stockInput.value,
+
+}
+
+
+axios.post(url,newProduct)
+.then(res=>{
+
+     getProducts();
+
+
+}) .catch((error) => {
+    console.error("Veri çekme sırasında bir hata oluştu: ", error);
+  });
+
 
 
 

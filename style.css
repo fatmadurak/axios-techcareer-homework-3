@@ -35,7 +35,7 @@ margin-top: .2rem;
 .container input{
 
 
-padding: .4rem;
+padding: .5rem;
 border:1px solid rgb(223, 213, 213);
 border-radius: .5rem;
 margin: .5rem 0;
@@ -44,6 +44,7 @@ margin: .5rem 0;
 
 .btn{
 
+    cursor: pointer;
     padding: .8rem 2rem;
     outline: none;
     border:1px solid rgb(223, 213, 213);
@@ -80,9 +81,10 @@ tr:nth-child(odd){
 
     background-color: rgb(218, 213, 208);
 }
+tr{
 
-tr:hover{
-
-background-color: green;
+    transition: all ease-in .3s;
+    cursor: pointer;
 
 }
+
