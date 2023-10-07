@@ -25,7 +25,7 @@ const getProducts = () => {
       //selectPrice
       const unitPrice = productData.map((item) => item.unitPrice);
       selectPrice.innerHTML = unitPrice.map((item) => `
-        <option value="${item}">${item}</option>
+        <option >${item}</option>
       `).join('');
     })
     .catch((error) => {
