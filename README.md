@@ -1,3 +1,1 @@
-# axios-table-tutorial
-
-<img src="axios-table-tutorial/table.png" height="500">
+<img src="axios-table-tutorial\img\table.png" alt="Anasayfa_" width="900" height="700">
