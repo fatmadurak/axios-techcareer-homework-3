@@ -1,10 +1,16 @@
 const tBody = document.querySelector(".tBody");
-const nameInput = document.querySelector("#name");
+const nameInput = document.querySelector("#nameFilter");
 const unitPriceInput = document.querySelector("#unitPrice");
 const stockInput = document.querySelector("#stock");
 
+
+
+//APİ URL
 const url = `https://northwind.vercel.app/api/products`;
 let productData = [];
+
+
+
 
 // Ürünleri API'den çekme
 const getProducts = () => {
@@ -19,8 +25,16 @@ const getProducts = () => {
     });
 };
 
+
+
+
 // sayfa yüklendiğinde verileri al
 getProducts();
+
+
+
+
+
 
 // Tabloyu doldur
 const tableFill = (data) => {
@@ -40,6 +54,11 @@ const tableFill = (data) => {
     tBody.appendChild(tr);
   });
 };
+
+
+
+
+
 
 // Yeni ürün eklemek
 const addNewProduct = () => {
@@ -63,6 +82,8 @@ const addNewProduct = () => {
     });
 };
 
+
+
 // Sİlme func
 const deleteProduct = (id) => {
   axios
@@ -75,6 +96,24 @@ const deleteProduct = (id) => {
       console.error("Ürün silinirken hata oluştu:", error);
     });
 };
+
+
+
+//name filter
+
+nameInput.addEventListener("input",function(){
+
+
+const search=nameInput.value.toLowerCase();
+
+const filteredData=productData.filter((item)=>item.name.toLowerCase().includes(search))
+
+
+
+tableFill(filteredData)
+
+
+})
 
 
 
