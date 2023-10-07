@@ -1,1 +1,1 @@
-![](axios-table-tutorial\img)
+![](axios-table-tutorial\img\table.png)
