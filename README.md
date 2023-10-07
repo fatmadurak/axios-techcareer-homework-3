@@ -1,1 +1,1 @@
-<img src="../axios-table-tutorial/img/table.png" alt="Table Image">
+<img src="./img/table.png" alt="Table Image">
