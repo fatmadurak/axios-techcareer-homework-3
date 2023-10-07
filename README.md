@@ -1,1 +1,1 @@
-![](img\table.png)
+![table](./img/table.png)
