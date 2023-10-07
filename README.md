@@ -1,1 +1,1 @@
-<img src="axios-table-tutorial\img\table.png" alt="img" width="900" height="700">
+![](axios-table-tutorial\img)
