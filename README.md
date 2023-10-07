@@ -1,1 +1,1 @@
-![table](../axios-table-tutorial/img/table.png)
+<img src="../axios-table-tutorial/img/table.png" alt="Table Image">
