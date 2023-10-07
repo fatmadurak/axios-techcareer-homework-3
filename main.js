@@ -19,6 +19,7 @@ const getProducts = () => {
     .get(url)
     .then((res) => {
       productData = res.data;
+      console.log(res.data)
       tableFill(productData);
 
       //selectPrice
@@ -35,7 +36,7 @@ const getProducts = () => {
 
 
 
-// sayfa yüklendiğinde verileri al
+// sayfa yüklendiğinde verileri getir
 getProducts();
 
 
