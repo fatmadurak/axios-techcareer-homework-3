@@ -1,130 +1,92 @@
-
-.table-container{
-
-display: flex;
-flex-direction: column;
-align-items: center;
-
+.table-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-.wrapper{
-    display: flex;
-    gap:1rem;
-    width: 70%;
-    background-color: rgb(218, 213, 208);
-    padding: 1rem;
-   
-
+.wrapper {
+  display: flex;
+  gap: 1rem;
+  width: 70%;
+  background-color: rgb(218, 213, 208);
+  padding: 1rem;
 }
 
-.container{
-
-display: flex;
-flex-direction: column;
-width: 60%;
-
+.container {
+  display: flex;
+  flex-direction: column;
+  width: 60%;
 }
 
-.container label{
-
-margin-top: .2rem;
-
-
+.container label {
+  margin-top: 0.2rem;
 }
 
-.container input{
-
-
-padding: .5rem;
-border:1px solid rgb(223, 213, 213);
-border-radius: .5rem;
-margin: .5rem 0;
-
+.container input {
+  padding: 0.5rem;
+  border: 1px solid rgb(223, 213, 213);
+  border-radius: 0.5rem;
+  margin: 0.5rem 0;
 }
 
-
-input:focus{
-
-outline: none;
-
+input:focus {
+  outline: none;
 }
 
-.btn{
-
-    cursor: pointer;
-    padding: .8rem 2rem;
-    outline: none;
-    border:1px solid rgb(223, 213, 213);
-    border-radius: .5rem;
-    background-color:green;
-    margin: 1rem 0;
-    
+.btn {
+  cursor: pointer;
+  padding: 0.8rem 2rem;
+  outline: none;
+  border: 1px solid rgb(223, 213, 213);
+  border-radius: 0.5rem;
+  background-color: green;
+  margin: 1rem 0;
 }
 
-.container .price{
-
-    width: 30%;
-    padding: .4rem ;
-    border:1px solid rgb(223, 213, 213);
-    border-radius: .5rem;
-    margin: .5rem 0;
-    outline: none;
-
+.container .price {
+  width: 30%;
+  padding: 0.4rem;
+  border: 1px solid rgb(223, 213, 213);
+  border-radius: 0.5rem;
+  margin: 0.5rem 0;
+  outline: none;
 }
 
-table{
-
-border-collapse: collapse;
-width: 72%;
-margin-top: 1rem;
-
-
+table {
+  border-collapse: collapse;
+  width: 72%;
+  margin-top: 1rem;
 }
 
-th{
-
-text-align: left;
-background-color: rgb(187, 84, 84);
-
+th {
+  text-align: left;
+  background-color: rgb(187, 84, 84);
 }
 
-th,td{
-
-    padding: 1rem 5rem;
-    border:1px solid rgb(223, 213, 213);
+th,
+td {
+  padding: 1rem 5rem;
+  border: 1px solid rgb(223, 213, 213);
 }
 
-
-tr:nth-child(odd){
-
-    background-color: rgb(218, 213, 208);
+tr:nth-child(odd) {
+  background-color: rgb(218, 213, 208);
 }
-tr{
-
-    
-    cursor: pointer;
-
+tr {
+  cursor: pointer;
 }
 
-
-
-.btnDelete{
-
-   
-    cursor: pointer;
-    padding: .8rem 2rem;
-    outline: none;
-    border:none;
-    border-radius: .5rem;
-    background-color:green;
-    opacity: 1;
-    
-
-
+.btnDelete {
+  cursor: pointer;
+  padding: 0.8rem 2rem;
+  outline: none;
+  border: none;
+  border-radius: 0.5rem;
+  background-color: green;
+  opacity: 1;
 }
 
-.btnDelete:hover{
-
-    background-color: green;
-    opacity: .8;
+.btnDelete:hover {
+  background-color: green;
+  opacity: 0.8;
 }

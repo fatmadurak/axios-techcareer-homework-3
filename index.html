@@ -7,42 +7,41 @@
     <title>Table</title>
   </head>
   <body>
-  <div class="table-container">
-    <div class="wrapper">
+    <div class="table-container">
+      <div class="wrapper">
         <div class="container">
           <label>Name:</label>
           <input type="text" placeholder="Name:" id="name" value="" />
-  
+
           <label>UnitPrice:</label>
-          <input type="text" placeholder="Unit Price:" id="unitPrice" value=""  />
-  
+          <input
+            type="text"
+            placeholder="Unit Price:"
+            id="unitPrice"
+            value=""
+          />
+
           <label>Stock:</label>
-          <input type="text" placeholder="Stock:" id="stock" value=""  />
-  
+          <input type="text" placeholder="Stock:" id="stock" value="" />
+
           <div>
             <button class="btn" onclick="addNewProduct()">Add</button>
           </div>
         </div>
-  
+
         <div class="container">
           <label>Name Filter:</label>
           <input type="text" placeholder="Name:" id="nameFilter" />
 
-
-
           <div class="container">
             <label>UnitPrice Select:</label>
-            <select id="unitPriceFilter" class="price" title="Select unit-price">
-    
-            </select>
+            <select
+              id="unitPriceFilter"
+              class="price"
+              title="Select unit-price"
+            ></select>
           </div>
         </div>
-
-        
-   
-
-
-
       </div>
       <table>
         <thead>
@@ -54,13 +53,9 @@
             <th>Delete</th>
           </tr>
         </thead>
-        <tbody class="tBody">
-
-
-
-        </tbody>
+        <tbody class="tBody"></tbody>
       </table>
-  </div>
+    </div>
 
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <script src="main.js"></script>

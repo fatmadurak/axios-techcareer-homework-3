@@ -3,15 +3,11 @@ const nameInput = document.querySelector("#name");
 const nameFilter = document.querySelector("#nameFilter");
 const unitPriceInput = document.querySelector("#unitPrice");
 const stockInput = document.querySelector("#stock");
-const selectPrice=document.querySelector("#unitPriceFilter");
-
+const selectPrice = document.querySelector("#unitPriceFilter");
 
 //APİ URL
 const url = `https://northwind.vercel.app/api/products`;
 let productData = [];
-
-
-
 
 // Ürünleri API'den çekme
 const getProducts = () => {
@@ -19,30 +15,26 @@ const getProducts = () => {
     .get(url)
     .then((res) => {
       productData = res.data;
-      console.log(res.data)
+      console.log(res.data);
       tableFill(productData);
 
       //selectPrice
       const unitPrice = productData.map((item) => item.unitPrice);
-      selectPrice.innerHTML = unitPrice.map((item) => `
+      selectPrice.innerHTML = unitPrice
+        .map(
+          (item) => `
         <option >${item}</option>
-      `).join('');
+      `
+        )
+        .join("");
     })
     .catch((error) => {
       console.error("Veri çekme sırasında bir hata oluştu: ", error);
     });
 };
 
-
-
-
 // sayfa yüklendiğinde verileri getir
 getProducts();
-
-
-
-
-
 
 // Tabloyu doldur
 const tableFill = (data) => {
@@ -62,11 +54,6 @@ const tableFill = (data) => {
     tBody.appendChild(tr);
   });
 };
-
-
-
-
-
 
 // Yeni ürün eklemek
 const addNewProduct = () => {
@@ -90,8 +77,6 @@ const addNewProduct = () => {
     });
 };
 
-
-
 // Sİlme func
 const deleteProduct = (id) => {
   axios
@@ -105,31 +90,23 @@ const deleteProduct = (id) => {
     });
 };
 
-
-
 //name filter
 
-nameFilter.addEventListener("input",function(){
+nameFilter.addEventListener("input", function () {
+  const search = nameFilter.value.toLowerCase();
 
-
-const search=nameFilter.value.toLowerCase();
-
-const filteredData=productData.filter((item)=>item.name.toLowerCase().includes(search))
-
-
-
-tableFill(filteredData)
-
-
-})
-
-
-selectPrice.addEventListener("change", function () {
-  const selectedPrice = selectPrice.value;
-  const filteredData = productData.filter((item) => item.unitPrice <= selectedPrice);
+  const filteredData = productData.filter((item) =>
+    item.name.toLowerCase().includes(search)
+  );
 
   tableFill(filteredData);
 });
 
+selectPrice.addEventListener("change", function () {
+  const selectedPrice = selectPrice.value;
+  const filteredData = productData.filter(
+    (item) => item.unitPrice <= selectedPrice
+  );
 
-
+  tableFill(filteredData);
+});
