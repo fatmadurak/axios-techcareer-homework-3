@@ -83,8 +83,30 @@ tr:nth-child(odd){
 }
 tr{
 
-    transition: all ease-in .3s;
+    
     cursor: pointer;
 
 }
 
+
+
+.btnDelete{
+
+   
+    cursor: pointer;
+    padding: .8rem 2rem;
+    outline: none;
+    border:none;
+    border-radius: .5rem;
+    background-color:green;
+    opacity: 1;
+    
+
+
+}
+
+.btnDelete:hover{
+
+    background-color: green;
+    opacity: .8;
+}
